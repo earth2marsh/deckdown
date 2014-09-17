@@ -1,0 +1,59 @@
+swagger: 2.0
+info:
+  version: "0.0.1"
+  title: Deckdown
+# during dev, should point to your local machine
+host: localhost
+# basePath prefixes all resource paths 
+basePath: /
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+x-volos-resources: {}
+paths:
+  /reveal:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: reveal
+    x-volos-authorizations: {}
+    x-volos-apply: {}
+    get:
+      description: Converts a markdown file to a reveal.js presentation
+      # used as the method name of the controller
+      operationId: reveal
+      parameters:
+        - name: gist
+          in: query
+          description: The hash of the gist
+          required: true
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: Deck
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: ErrorResponse
+# complex objects have schema definitions
+definitions:
+  Deck:
+    properties:
+      html:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Deckdown</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/pure-min.css">
+    <link rel="stylesheet" href="styles/grids-responsive-min.css">
+    <link rel="stylesheet" href="styles/styles.css" type='text/css'>
+    <style></style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="hero">
+        <div class="main">
+          <h1>Deckdown</h1>
+          <p>Deckdown is a totally new way to build a slide deck. You write markdown, and deckdown gives you a presentation.</p><p><strong>No BS. Or JS. Or HTML.</strong></p>
+        </div>
+        <div class="tryit pure-g">
+          <form action="/deck" method="post" class="pure-form pure-u-1">
+            
+              <h3>Enter a markdown file's url, or just type some markdown</h3>
+              <textarea name="markdown" class="markdown pure-u-1" rows="8" required></textarea>
+              <div class="pure-g">
+              <div class="pure-u-1 pure-u-md-3-4 controls">
+                <label for="theme">Theme:</label>
+                <select id="state" name="theme">
+
+                    <option value="beige">beige</option>
+                    <option value="blood">blood</option>
+                    <option value="default" selected>default</option>
+                    <option value="moon">moon</option>
+                    <option value="night">night</option>
+                    <option value="serif">serif</option>
+                    <option value="simple">simple</option>
+                    <option value="sky">sky</option>
+                    <option value="solarized">solarized</option>
+
+                </select>
+              </div>
+              <div class="pure-u-1 pure-u-md-1-4 submit">
+                <button type="submit" class="pure-button pure-button-primary">
+                  Create Deck
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          
+        </div>
+      </div>
+      <div class="content">
+        <%- content %>
+      </div> 
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "deckdown",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "My new Apigee 127 Project",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "3.x.x",
+    "request": "x.x.x",
+    "async": "x.x.x",
+    "github": "",
+    "a127-magic": "",
+    "volos-analytics-apigee": "",
+    "volos-analytics-common": "",
+    "volos-analytics-memory": "",
+    "volos-cache-apigee": "",
+    "volos-cache-memory": "",
+    "volos-cache-redis": "",
+    "volos-quota-apigee": "",
+    "volos-quota-memory": "",
+    "volos-quota-redis": "",
+    "volos-oauth-redis": "",
+    "volos-oauth-apigee": "",
+    
+    "marked": "~0.3.2",
+    "ejs": "~1.0.0",
+    "dive": "~0.3.1",
+    "diveSync": "~0.2.1",
+    "node.extend": "~1.1.2",
+    "path": "~0.4.9",
+    "querystring": "~0.2.0",
+    "less-middleware": "~1.0.4",
+    "body-parser": "~1.8.1",
+    "highlight.js": "~8.2.0",
+    "validator": "~3.18.1"
+  },
+  "devDependencies": {
+    "should": "3.1.x"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "api": {
+    "name": "deckdown",
+    "basePath": "/deckdown",
+    "docsPath": "/docs",
+    "main": "app.js"
+  }
+}
