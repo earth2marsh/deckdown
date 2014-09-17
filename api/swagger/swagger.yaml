@@ -19,7 +19,7 @@ produces:
   - application/json
 x-volos-resources: {}
 paths:
-  /reveal:
+  /gist/{gistid}:
     # binds a127 app logic to a route
     x-swagger-router-controller: reveal
     x-volos-authorizations: {}
@@ -29,8 +29,8 @@ paths:
       # used as the method name of the controller
       operationId: reveal
       parameters:
-        - name: gist
-          in: query
+        - name: gistid
+          in: path
           description: The hash of the gist
           required: true
           type: string
