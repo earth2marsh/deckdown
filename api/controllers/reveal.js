@@ -6,7 +6,7 @@ var GitHubApi = require("github");
 
 var fs = require("fs")
   , ejs = require('ejs')
-  , lessMiddleware = require('less-middleware')
+//  , lessMiddleware = require('less-middleware')
   , marked = require('marked')
   , extend = require('node.extend')
   , path = require('path')
